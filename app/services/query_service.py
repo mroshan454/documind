@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langchain_chroma import Chroma 
 from app.services.ingestion_service import _embedding_model, CHROMA_DIR 
 from langchain_openai import ChatOpenAI
+from app.core.exceptions import LLMUnavailableException
 
 load_dotenv() # Reads .env file into environement variable 
 
@@ -41,16 +42,19 @@ Question: {query}
 Answer:"""
     return prompt
 
-def call_llm(prompt: str) -> str:
-    """Send the prompt to OpenAI and return the answer text."""
-    response = _llm.invoke(prompt)
-    return response.content
+async def call_llm(prompt: str) -> str:
+    """Send the prompt to OpenAI asynchoronously and return the answer text."""
+    try:
+        response = await _llm.ainvoke(prompt)
+        return response.content
+    except Exception as e:
+        raise LLMUnavailableException(str(e))
 
-def query_documents(question: str , k: int = 3):
+async def query_documents(question: str , k: int = 3):
     """Run the full RAG Query: retrieve -> build prompt -> call LLM."""
     chunks = retrieve_chunks(question,k=k)
     prompt = build_prompt(question,chunks)
-    answer = call_llm(prompt)
+    answer = await call_llm(prompt)
     sources = [
         {
             "source": c.metadata.get("source"),
