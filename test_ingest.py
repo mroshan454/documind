@@ -1,6 +1,6 @@
 from app.services.ingestion_service import ingest_document , _embedding_model
 from langchain_chroma import Chroma 
-
+# Step1 
 #result = ingest_document("test.pdf")
 #print(f"Ingestion Complete!")
 #print(f"Pages processed: {result['pages']}")
