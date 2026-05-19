@@ -3,7 +3,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma 
 import hashlib 
-from app.e
+from app.core.exceptions import EmptyDocumentError
 
 #Initialise the embedding model 
 _embedding_model = OpenAIEmbeddings(
@@ -59,6 +59,12 @@ def ingest_document(file_path:str):
     """Run the full ingestion pipeline: hash -> load -> split -> store."""
     file_hash = compute_file_hash(file_path)
     documents = load_pdf(file_path)
+    
+    # Guard against image-only/scanned PDFs that yield no extractable text
+    total_chars = sum(len(d.page_content) for d in documents)
+    if total_chars == 0:
+        raise EmptyDocumentError()
+
     chunks = split_into_chunks(documents)
     store_in_chromadb(chunks,file_hash)
     return {

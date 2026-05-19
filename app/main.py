@@ -6,6 +6,7 @@ from pydantic import BaseModel
 
 from app.core.logging import configure_logging, get_logger
 from app.core.exceptions import DocuMindException 
+from app.core.exceptions import EmptyDocumentError
 from app.services.ingestion_service import ingest_document
 from app.services.query_service import query_documents
 
@@ -55,7 +56,13 @@ async def ingest_endpoint(file: UploadFile = File(...)):
     with open(file_path,'wb') as f:
         shutil.copyfileobj(file.file,f)
     
-    result = ingest_document(str(file_path))
+    try:
+        result = ingest_document(str(file_path))
+    except EmptyDocumentError as e:
+        raise HTTPException(
+              status_code=e.status_code,
+              detail={"error_code": e.error_code, "message": e.message}
+        )
 
     logger.info(
         "ingest_complete",
