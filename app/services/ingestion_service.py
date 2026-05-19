@@ -3,6 +3,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma 
 import hashlib 
+from app.e
 
 #Initialise the embedding model 
 _embedding_model = OpenAIEmbeddings(
