@@ -44,6 +44,19 @@ async def health_check():
     logger.info("health_check_called")
     return {"status": "ok"} 
 
+@app.get("/")
+async def root():
+    return {
+        "name": "Documind",
+        "version": "1.0.0"
+        "description" : "Production RAG System for PDF Question answering",
+        "docs": "/docs",
+        "endpoints": {
+            "ingest": "POST /ingest",
+            "query" : "POST / query"
+        },
+    }
+
 @app.post("/ingest")
 async def ingest_endpoint(file: UploadFile = File(...)):
     logger.info("ingest_started",filename=file.filename)
