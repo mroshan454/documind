@@ -48,7 +48,7 @@ async def health_check():
 async def root():
     return {
         "name": "Documind",
-        "version": "1.0.0"
+        "version": "1.0.0",
         "description" : "Production RAG System for PDF Question answering",
         "docs": "/docs",
         "endpoints": {
