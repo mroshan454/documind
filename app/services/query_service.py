@@ -21,7 +21,7 @@ def retrieve_chunks(query:str , k: int = 3):
         persist_directory=CHROMA_DIR,
     )
 
-    results = vector_store.similarity_search(query,k=k)
+    results = vector_store.similarity_search_with_score(query,k=k)
     return results
 
 def build_prompt(query:str , chunks):
@@ -52,14 +52,17 @@ async def call_llm(prompt: str) -> str:
 
 async def query_documents(question: str , k: int = 3):
     """Run the full RAG Query: retrieve -> build prompt -> call LLM."""
-    chunks = retrieve_chunks(question,k=k)
+    results = retrieve_chunks(question, k=k)         #[(doc,score), ....]
+    chunks = [doc for doc , _score in results]       # docs only ,for the prompt 
     prompt = build_prompt(question,chunks)
     answer = await call_llm(prompt)
     sources = [
         {
-            "source": c.metadata.get("source"),
-            "page": c.metadata.get("page_label"),
+            "source": doc.metadata.get("source"),
+            "page": doc.metadata.get("page_label"),
+            "text": doc.page_content,
+            "score":float(score)
         }
-        for c in chunks 
+        for doc , score in results
     ]
     return {"answer": answer , "sources": sources} 

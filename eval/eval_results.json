@@ -1,0 +1,630 @@
+[
+  {
+    "id": "mh_001",
+    "query": "How many litres of seawater per day can the Tidepod-3 process?",
+    "ground_truth_answer": "Up to 4,000 litres per day.",
+    "gold_context": [
+      "The flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs entirely on solar power."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "easy_lookup",
+    "generated_answer": "The Tidepod-3 can process up to 4,000 litres of seawater per day (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.8154528141021729
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 0.8198565244674683
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.131559133529663
+      }
+    ],
+    "error": null,
+    "latency_seconds": 4.97
+  },
+  {
+    "id": "mh_002",
+    "query": "In what year and city was Meridian Hollow founded?",
+    "ground_truth_answer": "It was founded in 2019 in Reykjavík, Iceland.",
+    "gold_context": [
+      "Meridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavík, Iceland."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "easy_lookup",
+    "generated_answer": "Meridian Hollow was founded in 2019 in Reykjavik, Iceland. [Source: uploads/meridian_hollow_factsheet.pdf, Page: 1]",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.0578422546386719
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.1098073720932007
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 1.419644832611084
+      }
+    ],
+    "error": null,
+    "latency_seconds": 2.89
+  },
+  {
+    "id": "mh_003",
+    "query": "How much does a single Tidepod-3 unit cost?",
+    "ground_truth_answer": "8,900 USD.",
+    "gold_context": [
+      "A single Tidepod-3 unit costs 8,900 USD."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "A single Tidepod-3 unit costs 8,900 USD (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.730412483215332
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 0.9686305522918701
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.2083829641342163
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.91
+  },
+  {
+    "id": "mh_004",
+    "query": "How long is the Tidepod-3's graphene-oxide membrane rated to last before replacement?",
+    "ground_truth_answer": "5 years of continuous use.",
+    "gold_context": [
+      "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use before replacement."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "The Tidepod-3's graphene-oxide membrane is rated for 5 years of continuous use before replacement (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.6824281811714172
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.125057578086853
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.2293561697006226
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.95
+  },
+  {
+    "id": "mh_005",
+    "query": "Who is the CEO of Meridian Hollow and what was her background before founding the company?",
+    "ground_truth_answer": "Dr. Anneli Vos, who was a former marine biologist and co-founded the company.",
+    "gold_context": [
+      "The CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "The CEO of Meridian Hollow is Dr. Anneli Vos, who is a former marine biologist. She co-founded the company. [Source: uploads/meridian_hollow_factsheet.pdf, Page: 1]",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 0.9570527076721191
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.061436414718628
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 1.271540880203247
+      }
+    ],
+    "error": null,
+    "latency_seconds": 2.55
+  },
+  {
+    "id": "mh_006",
+    "query": "How much more water can the current Tidepod model process per day compared to the discontinued one?",
+    "ground_truth_answer": "2,500 litres more per day. The Tidepod-3 processes 4,000 L/day while the discontinued Tidepod-2 processed 1,500 L/day.",
+    "gold_context": [
+      "The flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs entirely on solar power.",
+      "The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "multi_hop",
+    "generated_answer": "The current Tidepod model, the Tidepod-3, processes up to 4,000 litres of seawater per day, while the discontinued Tidepod-2 processed only 1,500 litres per day. Therefore, the Tidepod-3 can process 2,500 litres more water per day compared to the Tidepod-2. \n\n(Source: uploads/meridian_hollow_factsheet.pdf, Page: 1)",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.8645370602607727
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 0.9418708086013794
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.1294752359390259
+      }
+    ],
+    "error": null,
+    "latency_seconds": 2.88
+  },
+  {
+    "id": "mh_007",
+    "query": "What is the largest single Tidepod deployment, where is it, and what initiative is it part of?",
+    "ground_truth_answer": "300 units in coastal Kenya, as part of the BlueWell initiative launched in 2022.",
+    "gold_context": [
+      "The company has deployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal Kenya as part of the \"BlueWell\" initiative launched in 2022."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "The largest single Tidepod deployment is 300 units located in coastal Kenya, and it is part of the \"BlueWell\" initiative launched in 2022 (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.7542437314987183
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 0.862227201461792
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 0.9568026065826416
+      }
+    ],
+    "error": null,
+    "latency_seconds": 2.15
+  },
+  {
+    "id": "mh_008",
+    "query": "By what year has Meridian Hollow pledged to be carbon-neutral?",
+    "ground_truth_answer": "2027.",
+    "gold_context": [
+      "Meridian Hollow pledged to be carbon-neutral by 2027."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "easy_lookup",
+    "generated_answer": "Meridian Hollow has pledged to be carbon-neutral by 2027 (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 0.7363896369934082
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.0886590480804443
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 1.1934078931808472
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.45
+  },
+  {
+    "id": "mh_009",
+    "query": "Who led Meridian Hollow's Series A round, how much was it, and in what year?",
+    "ground_truth_answer": "A 12 million USD Series A round in 2021, led by Northwind Ventures.",
+    "gold_context": [
+      "The company raised a 12 million USD Series A round in 2021, led by Northwind Ventures."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "Meridian Hollow's Series A round was led by Northwind Ventures, raised 12 million USD, and took place in 2021 (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 0.7826031446456909
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.0809777975082397
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 1.205836296081543
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.91
+  },
+  {
+    "id": "mh_010",
+    "query": "Does the Tidepod-3 cost more for the unit itself or for five years of the subscription maintenance plan?",
+    "ground_truth_answer": "The unit itself costs more. The Tidepod-3 unit is 8,900 USD, while five years of the 600 USD/year maintenance plan totals 3,000 USD.",
+    "gold_context": [
+      "A single Tidepod-3 unit costs 8,900 USD.",
+      "Meridian Hollow offers a subscription maintenance plan at 600 USD per year, which includes one free membrane replacement."
+    ],
+    "source_doc": "meridian_hollow_factsheet.txt",
+    "difficulty": "multi_hop",
+    "generated_answer": "The Tidepod-3 unit costs 8,900 USD, while the subscription maintenance plan costs 600 USD per year. Over five years, the total cost of the subscription maintenance plan would be 3,000 USD (600 USD x 5 years). Therefore, the Tidepod-3 costs more for the unit itself than for five years of the subscription maintenance plan. \n\n(Source: uploads/meridian_hollow_factsheet.pdf, Page: 1)",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.740597128868103
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.1128809452056885
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.2050652503967285
+      }
+    ],
+    "error": null,
+    "latency_seconds": 2.67
+  },
+  {
+    "id": "cv_001",
+    "query": "By what percentage did Roshan reduce the DocuMind production Docker image, and from what size to what size?",
+    "ground_truth_answer": "By about 89%, from 8.9 GB to under 1 GB.",
+    "gold_context": [
+      "Reduced the production Docker image from 8.9 GB to under 1 GB (≈89%) by migrating from local HuggingFace embeddings to OpenAI's embedding API after profiling real dependencies."
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "Roshan reduced the DocuMind production Docker image from 8.9 GB to under 1 GB, achieving a reduction of approximately 89% (≈ 89%) (Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "PROJECTS \nDocuMind  —  Production  RAG  System  on  AWS Mar  2026  –  May  2026  FastAPI  ·  LangChain  ·  ChromaDB  ·  OpenAI  ·  Docker  ·  AWS  EC2  ·  Nginx  ·  Let's  Encrypt  ·  Cloudflare Live:  documind.mroshan454.dev/docs   |    GitHub:  github.com/mroshan454/documind •  Built  and  deployed  an  end-to-end  document-QA  backend:  PDF  ingestion  →  vector  indexing  →  LLM-grounded  \nanswers\n \nwith\n \ncited\n \nsources.\n \nPublicly\n \naccessible\n \nvia\n \nHTTPS\n \non\n \na\n \ncustom\n \ndomain.\n •  Deployed  a  containerized  FastAPI  service  on  AWS  EC2  with  Nginx  reverse  proxy,  Let's  Encrypt  SSL  \n(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.",
+        "score": 1.126937747001648
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.\n •  Reduced  the  production  Docker  image  from  8.9  GB  to  under  1  GB  ( ≈ 89%)  by  migrating  from  local  HuggingFace  \nembeddings\n \nto\n \nOpenAI's\n \nembedding\n \nAPI\n \nafter\n \nprofiling\n \nreal\n \ndependencies.\n •  Designed  idempotent  ingestion  with  SHA-256  deterministic  chunk  IDs;  implemented  async  LLM  calls  via  \nLangChain\n \nainvoke()\n \nfor\n \nconcurrent\n \nrequest\n \nhandling.\n •  Built  a  custom  exception  hierarchy  with  structured  error  codes,  structured  JSON  logging  (structlog),  and  a  \npytest\n \nsuite\n \n(unit\n \n+\n \nintegration\n \nwith\n \nmocked\n \nLLM/vectorstore).",
+        "score": 1.1831026077270508
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "ROSHAN  MOHAMMED AI  /  Machine  Learning  Engineer   |   RAG  ·  LangChain  ·  FastAPI  ·  AWS  Full  Work  Rights  in  Australia   |   No  Employer  Sponsorship  Required Oakleigh  South  VIC  3167   |   +61  411  348  000   |   roshanpkr2000@gmail.com Live  Demo:  documind.mroshan454.dev  |   LinkedIn  |   GitHub  |   Hugging  Face \nSUMMARY Melbourne-based  AI/Software  Engineer  with  an  MSc  in  Artificial  Intelligence,  specializing  in  building  and  deploying  \nproduction-ready\n \nLLM\n \nand\n \nRAG\n \napplications.\n \nRecently\n \nshipped\n \nDocuMind,\n \na\n \nlive\n \nRAG\n \nsystem\n \non\n \nAWS\n \n(FastAPI,\n \nDocker,\n \nNginx,\n \nHTTPS).\n \nHands-on\n \nacross\n \nthe\n \nmodern\n \nAI\n \nstack\n \n—\n \nLangChain,\n \nvector\n \ndatabases,\n \nOpenAI\n \nintegration,\n \nprompt\n \nengineering,\n \nand\n \nmodel\n \nevaluation",
+        "score": 1.198816180229187
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.42
+  },
+  {
+    "id": "cv_002",
+    "query": "How many classes does the PlantNet39 disease classifier predict, and what model architecture does it use?",
+    "ground_truth_answer": "39 classes, using EfficientNet-B2 via transfer learning.",
+    "gold_context": [
+      "Built and deployed a 39-class plant-disease classifier via transfer learning on EfficientNet-B2; ~35 MB model optimised for CPU-only inference."
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "The PlantNet39 disease classifier predicts 39 classes and uses the EfficientNet-B2 model architecture. [Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 1]",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "cross-attention;\n \nlive\n \ndemo\n \non\n \nHugging\n \nFace\n \nSpaces.\n PlantNet39  —  Plant  Disease  Classifier  (39  classes) Sep  2025  –  Dec  2025  EfficientNet-B2  ·  Transfer  Learning  ·  PyTorch  ·  Gradio Live:  huggingface.co/spaces/roshan454/PlantNet39   |    GitHub:  github.com/mroshan454/PlantNet39 •  Built  and  deployed  a  39-class  plant-disease  classifier  via  transfer  learning  on  EfficientNet-B2;  ~35  MB  model  \noptimised\n \nfor\n \nCPU-only\n \ninference.\n •  Added  a  dedicated  non-leaf  background  class  to  reject  invalid  inputs  gracefully;  shipped  a  live  public  demo  on  \nHugging\n \nFace\n \nSpaces.",
+        "score": 0.8070500493049622
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "pytest\n \nsuite\n \n(unit\n \n+\n \nintegration\n \nwith\n \nmocked\n \nLLM/vectorstore).\n CrossSight  —  Multimodal  Image  Captioning  System Jan  2026  –  Mar  2026  PyTorch  ·  CNN  encoder  +  Transformer  decoder  ·  Cross-Attention  ·  Gradio Live:  huggingface.co/spaces/roshan454/CrossSight   |    GitHub:  github.com/mroshan454/CrossSight_Image_Captioning •  Designed  and  deployed  an  image-captioning  system  pairing  a  CNN  encoder  with  a  Transformer  decoder  via  \ncross-attention;\n \nlive\n \ndemo\n \non\n \nHugging\n \nFace\n \nSpaces.",
+        "score": 1.4240964651107788
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "2",
+        "text": "•  Implemented  a  GPT-style  transformer  and  replicated  the  Vision  Transformer  paper  end-to-end  in  PyTorch  —  \ntokenization,\n \nembeddings,\n \nmulti-head\n \nself-attention,\n \ncausal\n \nmasking,\n \npatch/positional\n \nembeddings\n \n—\n \ndemonstrating\n \ndeep\n \narchitectural\n \nunderstanding\n \nbeyond\n \nlibrary\n \nusage.\n \nEXPERIENCE \nResearch  Assistant  (Contract)  —  Energy  Consumption  Prediction                                       May  2024  –  Jul  2024  Buckinghamshire  New  University,  United  Kingdom •  Developed  energy-consumption  prediction  models  on  UK  EPC  datasets  (scikit-learn);  applied  SHAP  for  \ninterpretability;\n \ndelivered\n \nan\n \ninternal\n \nweb\n \ndemo.",
+        "score": 1.4302207231521606
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.25
+  },
+  {
+    "id": "cv_003",
+    "query": "What method does DocuMind use to make ingestion idempotent?",
+    "ground_truth_answer": "SHA-256 deterministic chunk IDs.",
+    "gold_context": [
+      "Designed idempotent ingestion with SHA-256 deterministic chunk IDs; implemented async LLM calls via LangChain ainvoke() for concurrent request handling."
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "DocuMind uses SHA-256 deterministic chunk IDs to make ingestion idempotent. This method ensures that each chunk of data has a unique identifier, allowing for consistent processing without duplication. [Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 1]",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "PROJECTS \nDocuMind  —  Production  RAG  System  on  AWS Mar  2026  –  May  2026  FastAPI  ·  LangChain  ·  ChromaDB  ·  OpenAI  ·  Docker  ·  AWS  EC2  ·  Nginx  ·  Let's  Encrypt  ·  Cloudflare Live:  documind.mroshan454.dev/docs   |    GitHub:  github.com/mroshan454/documind •  Built  and  deployed  an  end-to-end  document-QA  backend:  PDF  ingestion  →  vector  indexing  →  LLM-grounded  \nanswers\n \nwith\n \ncited\n \nsources.\n \nPublicly\n \naccessible\n \nvia\n \nHTTPS\n \non\n \na\n \ncustom\n \ndomain.\n •  Deployed  a  containerized  FastAPI  service  on  AWS  EC2  with  Nginx  reverse  proxy,  Let's  Encrypt  SSL  \n(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.",
+        "score": 1.1466515064239502
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.\n •  Reduced  the  production  Docker  image  from  8.9  GB  to  under  1  GB  ( ≈ 89%)  by  migrating  from  local  HuggingFace  \nembeddings\n \nto\n \nOpenAI's\n \nembedding\n \nAPI\n \nafter\n \nprofiling\n \nreal\n \ndependencies.\n •  Designed  idempotent  ingestion  with  SHA-256  deterministic  chunk  IDs;  implemented  async  LLM  calls  via  \nLangChain\n \nainvoke()\n \nfor\n \nconcurrent\n \nrequest\n \nhandling.\n •  Built  a  custom  exception  hierarchy  with  structured  error  codes,  structured  JSON  logging  (structlog),  and  a  \npytest\n \nsuite\n \n(unit\n \n+\n \nintegration\n \nwith\n \nmocked\n \nLLM/vectorstore).",
+        "score": 1.292931318283081
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "across\n \nthe\n \nmodern\n \nAI\n \nstack\n \n—\n \nLangChain,\n \nvector\n \ndatabases,\n \nOpenAI\n \nintegration,\n \nprompt\n \nengineering,\n \nand\n \nmodel\n \nevaluation\n \n—\n \nwith\n \nstrong\n \nproduction-engineering\n \ndiscipline,\n \nincluding\n \nan\n \n89%\n \nreduction\n \nin\n \nproduction\n \nDocker\n \nimage\n \nsize.\n \nCombines\n \napplied\n \nAI\n \ndelivery\n \nwith\n \ndeep\n \nML\n \nfoundations.\n \nTECHNICAL  SKILLS AI  Engineering:  LangChain,  ChromaDB  (vector  store),  OpenAI  API,  RAG  architecture,  embeddings,  prompt  \nengineering,\n \nRAG\n \nevaluation\n \n(faithfulness,\n \nrecall@k)",
+        "score": 1.4344292879104614
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.34
+  },
+  {
+    "id": "cv_004",
+    "query": "Which two deep learning architectures did Roshan implement from scratch in PyTorch without high-level transformer libraries?",
+    "ground_truth_answer": "A GPT-style transformer and the Vision Transformer (ViT).",
+    "gold_context": [
+      "Implemented a GPT-style transformer and replicated the Vision Transformer paper end-to-end in PyTorch — tokenization, embeddings, multi-head self-attention, causal masking, patch/positional embeddings — demonstrating deep architectural understanding beyond library usage."
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "easy_lookup",
+    "generated_answer": "Roshan implemented a GPT-style transformer and the Vision Transformer (ViT) from scratch in PyTorch without high-level transformer libraries (Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "2",
+        "text": "•  Implemented  a  GPT-style  transformer  and  replicated  the  Vision  Transformer  paper  end-to-end  in  PyTorch  —  \ntokenization,\n \nembeddings,\n \nmulti-head\n \nself-attention,\n \ncausal\n \nmasking,\n \npatch/positional\n \nembeddings\n \n—\n \ndemonstrating\n \ndeep\n \narchitectural\n \nunderstanding\n \nbeyond\n \nlibrary\n \nusage.\n \nEXPERIENCE \nResearch  Assistant  (Contract)  —  Energy  Consumption  Prediction                                       May  2024  –  Jul  2024  Buckinghamshire  New  University,  United  Kingdom •  Developed  energy-consumption  prediction  models  on  UK  EPC  datasets  (scikit-learn);  applied  SHAP  for  \ninterpretability;\n \ndelivered\n \nan\n \ninternal\n \nweb\n \ndemo.",
+        "score": 1.0732004642486572
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "Hugging\n \nFace\n \nSpaces.\n Deep  Learning  Foundations  —  GPT  &  ViT  from  Scratch 2025  –  2026  PyTorch  ·  No  high-level  transformer  libraries GPT:  github.com/mroshan454/GPT-From-Scratch-PyTorch   |    ViT:  github.com/mroshan454/Replicating-ViT-Research-Paper",
+        "score": 1.1011066436767578
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "ROSHAN  MOHAMMED AI  /  Machine  Learning  Engineer   |   RAG  ·  LangChain  ·  FastAPI  ·  AWS  Full  Work  Rights  in  Australia   |   No  Employer  Sponsorship  Required Oakleigh  South  VIC  3167   |   +61  411  348  000   |   roshanpkr2000@gmail.com Live  Demo:  documind.mroshan454.dev  |   LinkedIn  |   GitHub  |   Hugging  Face \nSUMMARY Melbourne-based  AI/Software  Engineer  with  an  MSc  in  Artificial  Intelligence,  specializing  in  building  and  deploying  \nproduction-ready\n \nLLM\n \nand\n \nRAG\n \napplications.\n \nRecently\n \nshipped\n \nDocuMind,\n \na\n \nlive\n \nRAG\n \nsystem\n \non\n \nAWS\n \n(FastAPI,\n \nDocker,\n \nNginx,\n \nHTTPS).\n \nHands-on\n \nacross\n \nthe\n \nmodern\n \nAI\n \nstack\n \n—\n \nLangChain,\n \nvector\n \ndatabases,\n \nOpenAI\n \nintegration,\n \nprompt\n \nengineering,\n \nand\n \nmodel\n \nevaluation",
+        "score": 1.1228618621826172
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.73
+  },
+  {
+    "id": "cv_005",
+    "query": "Where did Roshan complete his MSc in Artificial Intelligence and in what years?",
+    "ground_truth_answer": "Buckinghamshire New University, United Kingdom, from 2023 to 2024.",
+    "gold_context": [
+      "MSc Artificial Intelligence 2023 – 2024 Buckinghamshire New University, United Kingdom"
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "easy_lookup",
+    "generated_answer": "Roshan completed his MSc in Artificial Intelligence at Buckinghamshire New University, United Kingdom, from 2023 to 2024 (Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 2).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "ROSHAN  MOHAMMED AI  /  Machine  Learning  Engineer   |   RAG  ·  LangChain  ·  FastAPI  ·  AWS  Full  Work  Rights  in  Australia   |   No  Employer  Sponsorship  Required Oakleigh  South  VIC  3167   |   +61  411  348  000   |   roshanpkr2000@gmail.com Live  Demo:  documind.mroshan454.dev  |   LinkedIn  |   GitHub  |   Hugging  Face \nSUMMARY Melbourne-based  AI/Software  Engineer  with  an  MSc  in  Artificial  Intelligence,  specializing  in  building  and  deploying  \nproduction-ready\n \nLLM\n \nand\n \nRAG\n \napplications.\n \nRecently\n \nshipped\n \nDocuMind,\n \na\n \nlive\n \nRAG\n \nsystem\n \non\n \nAWS\n \n(FastAPI,\n \nDocker,\n \nNginx,\n \nHTTPS).\n \nHands-on\n \nacross\n \nthe\n \nmodern\n \nAI\n \nstack\n \n—\n \nLangChain,\n \nvector\n \ndatabases,\n \nOpenAI\n \nintegration,\n \nprompt\n \nengineering,\n \nand\n \nmodel\n \nevaluation",
+        "score": 0.9176318049430847
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "2",
+        "text": "interpretability;\n \ndelivered\n \nan\n \ninternal\n \nweb\n \ndemo.\n Teaching  Assistant  —  Python  Programming                                                                             Oct  2024  –  Mar  2025  Buckinghamshire  New  University,  United  Kingdom •  Supported  undergraduate  Python  workshops;  mentored  first-year  students  on  Git,  debugging,  and  assignment  \nreviews\n \n—\n \nstrong\n \ntechnical\n \ncommunication\n \nto\n \nnon-experts.\n \nEDUCATION \nMSc  Artificial  Intelligence 2023  –  2024  Buckinghamshire  New  University,  United  Kingdom BSc  Computer  Science 2020  –  2023  Kerala  University,  India",
+        "score": 1.2508435249328613
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "2",
+        "text": "•  Implemented  a  GPT-style  transformer  and  replicated  the  Vision  Transformer  paper  end-to-end  in  PyTorch  —  \ntokenization,\n \nembeddings,\n \nmulti-head\n \nself-attention,\n \ncausal\n \nmasking,\n \npatch/positional\n \nembeddings\n \n—\n \ndemonstrating\n \ndeep\n \narchitectural\n \nunderstanding\n \nbeyond\n \nlibrary\n \nusage.\n \nEXPERIENCE \nResearch  Assistant  (Contract)  —  Energy  Consumption  Prediction                                       May  2024  –  Jul  2024  Buckinghamshire  New  University,  United  Kingdom •  Developed  energy-consumption  prediction  models  on  UK  EPC  datasets  (scikit-learn);  applied  SHAP  for  \ninterpretability;\n \ndelivered\n \nan\n \ninternal\n \nweb\n \ndemo.",
+        "score": 1.344627857208252
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.44
+  },
+  {
+    "id": "cv_006",
+    "query": "Which embedding approach did DocuMind move away from, and which did it move to, when shrinking the Docker image?",
+    "ground_truth_answer": "It migrated away from local HuggingFace embeddings to OpenAI's embedding API.",
+    "gold_context": [
+      "Reduced the production Docker image from 8.9 GB to under 1 GB (≈89%) by migrating from local HuggingFace embeddings to OpenAI's embedding API after profiling real dependencies."
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "DocuMind moved away from local HuggingFace embeddings and migrated to OpenAI's embedding API when shrinking the Docker image from 8.9 GB to under 1 GB (≈ 89%) [Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 1].",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.\n •  Reduced  the  production  Docker  image  from  8.9  GB  to  under  1  GB  ( ≈ 89%)  by  migrating  from  local  HuggingFace  \nembeddings\n \nto\n \nOpenAI's\n \nembedding\n \nAPI\n \nafter\n \nprofiling\n \nreal\n \ndependencies.\n •  Designed  idempotent  ingestion  with  SHA-256  deterministic  chunk  IDs;  implemented  async  LLM  calls  via  \nLangChain\n \nainvoke()\n \nfor\n \nconcurrent\n \nrequest\n \nhandling.\n •  Built  a  custom  exception  hierarchy  with  structured  error  codes,  structured  JSON  logging  (structlog),  and  a  \npytest\n \nsuite\n \n(unit\n \n+\n \nintegration\n \nwith\n \nmocked\n \nLLM/vectorstore).",
+        "score": 1.0017503499984741
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "PROJECTS \nDocuMind  —  Production  RAG  System  on  AWS Mar  2026  –  May  2026  FastAPI  ·  LangChain  ·  ChromaDB  ·  OpenAI  ·  Docker  ·  AWS  EC2  ·  Nginx  ·  Let's  Encrypt  ·  Cloudflare Live:  documind.mroshan454.dev/docs   |    GitHub:  github.com/mroshan454/documind •  Built  and  deployed  an  end-to-end  document-QA  backend:  PDF  ingestion  →  vector  indexing  →  LLM-grounded  \nanswers\n \nwith\n \ncited\n \nsources.\n \nPublicly\n \naccessible\n \nvia\n \nHTTPS\n \non\n \na\n \ncustom\n \ndomain.\n •  Deployed  a  containerized  FastAPI  service  on  AWS  EC2  with  Nginx  reverse  proxy,  Let's  Encrypt  SSL  \n(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.",
+        "score": 1.0659947395324707
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "pytest\n \nsuite\n \n(unit\n \n+\n \nintegration\n \nwith\n \nmocked\n \nLLM/vectorstore).\n CrossSight  —  Multimodal  Image  Captioning  System Jan  2026  –  Mar  2026  PyTorch  ·  CNN  encoder  +  Transformer  decoder  ·  Cross-Attention  ·  Gradio Live:  huggingface.co/spaces/roshan454/CrossSight   |    GitHub:  github.com/mroshan454/CrossSight_Image_Captioning •  Designed  and  deployed  an  image-captioning  system  pairing  a  CNN  encoder  with  a  Transformer  decoder  via  \ncross-attention;\n \nlive\n \ndemo\n \non\n \nHugging\n \nFace\n \nSpaces.",
+        "score": 1.2331985235214233
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.99
+  },
+  {
+    "id": "cv_007",
+    "query": "What logging library does DocuMind use, and what testing framework backs its test suite?",
+    "ground_truth_answer": "It uses structlog for structured JSON logging and pytest for its test suite.",
+    "gold_context": [
+      "Built a custom exception hierarchy with structured error codes, structured JSON logging (structlog), and a pytest suite (unit + integration with mocked LLM/vectorstore)."
+    ],
+    "source_doc": "roshan_cv.txt",
+    "difficulty": "specific_detail",
+    "generated_answer": "DocuMind uses the structured JSON logging library called `structlog`, and its test suite is backed by the `pytest` framework (unit + integration with mocked LLM/vectorstore) (Source: uploads/Roshan_Mohammed_AI_Engineer-2.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "PROJECTS \nDocuMind  —  Production  RAG  System  on  AWS Mar  2026  –  May  2026  FastAPI  ·  LangChain  ·  ChromaDB  ·  OpenAI  ·  Docker  ·  AWS  EC2  ·  Nginx  ·  Let's  Encrypt  ·  Cloudflare Live:  documind.mroshan454.dev/docs   |    GitHub:  github.com/mroshan454/documind •  Built  and  deployed  an  end-to-end  document-QA  backend:  PDF  ingestion  →  vector  indexing  →  LLM-grounded  \nanswers\n \nwith\n \ncited\n \nsources.\n \nPublicly\n \naccessible\n \nvia\n \nHTTPS\n \non\n \na\n \ncustom\n \ndomain.\n •  Deployed  a  containerized  FastAPI  service  on  AWS  EC2  with  Nginx  reverse  proxy,  Let's  Encrypt  SSL  \n(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.",
+        "score": 1.1087369918823242
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "(auto-renewing),\n \nCloudflare\n \nDNS,\n \nand\n \na\n \nstatic\n \nElastic\n \nIP.\n •  Reduced  the  production  Docker  image  from  8.9  GB  to  under  1  GB  ( ≈ 89%)  by  migrating  from  local  HuggingFace  \nembeddings\n \nto\n \nOpenAI's\n \nembedding\n \nAPI\n \nafter\n \nprofiling\n \nreal\n \ndependencies.\n •  Designed  idempotent  ingestion  with  SHA-256  deterministic  chunk  IDs;  implemented  async  LLM  calls  via  \nLangChain\n \nainvoke()\n \nfor\n \nconcurrent\n \nrequest\n \nhandling.\n •  Built  a  custom  exception  hierarchy  with  structured  error  codes,  structured  JSON  logging  (structlog),  and  a  \npytest\n \nsuite\n \n(unit\n \n+\n \nintegration\n \nwith\n \nmocked\n \nLLM/vectorstore).",
+        "score": 1.2556281089782715
+      },
+      {
+        "source": "uploads/Roshan_Mohammed_AI_Engineer-2.pdf",
+        "page": "1",
+        "text": "ROSHAN  MOHAMMED AI  /  Machine  Learning  Engineer   |   RAG  ·  LangChain  ·  FastAPI  ·  AWS  Full  Work  Rights  in  Australia   |   No  Employer  Sponsorship  Required Oakleigh  South  VIC  3167   |   +61  411  348  000   |   roshanpkr2000@gmail.com Live  Demo:  documind.mroshan454.dev  |   LinkedIn  |   GitHub  |   Hugging  Face \nSUMMARY Melbourne-based  AI/Software  Engineer  with  an  MSc  in  Artificial  Intelligence,  specializing  in  building  and  deploying  \nproduction-ready\n \nLLM\n \nand\n \nRAG\n \napplications.\n \nRecently\n \nshipped\n \nDocuMind,\n \na\n \nlive\n \nRAG\n \nsystem\n \non\n \nAWS\n \n(FastAPI,\n \nDocker,\n \nNginx,\n \nHTTPS).\n \nHands-on\n \nacross\n \nthe\n \nmodern\n \nAI\n \nstack\n \n—\n \nLangChain,\n \nvector\n \ndatabases,\n \nOpenAI\n \nintegration,\n \nprompt\n \nengineering,\n \nand\n \nmodel\n \nevaluation",
+        "score": 1.3715850114822388
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.79
+  },
+  {
+    "id": "cross_001",
+    "query": "Between Roshan's PlantNet39 model and the Tidepod-3's membrane, which has a longer stated lifespan or is that comparison even possible from the documents?",
+    "ground_truth_answer": "The comparison is not possible. The documents state the Tidepod-3 membrane is rated for 5 years, but the CV gives no lifespan for the PlantNet39 model (only its ~35 MB size and CPU-only inference). A faithful answer should decline to compare.",
+    "gold_context": [
+      "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use before replacement.",
+      "Built and deployed a 39-class plant-disease classifier via transfer learning on EfficientNet-B2; ~35 MB model optimised for CPU-only inference."
+    ],
+    "source_doc": "both",
+    "difficulty": "multi_hop",
+    "generated_answer": "The comparison between Roshan's PlantNet39 model and the Tidepod-3's membrane lifespan is not possible from the provided documents, as there is no information about the lifespan of Roshan's PlantNet39 model. The Tidepod-3's membrane is rated for 5 years of continuous use before replacement (Source: uploads/meridian_hollow_factsheet.pdf, Page: 1).",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 0.8882488012313843
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.0753552913665771
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 1.1838853359222412
+      }
+    ],
+    "error": null,
+    "latency_seconds": 2.66
+  },
+  {
+    "id": "neg_001",
+    "query": "What is Meridian Hollow's annual revenue?",
+    "ground_truth_answer": "The documents do not state Meridian Hollow's annual revenue. A faithful system should say it cannot find this information rather than guessing.",
+    "gold_context": [],
+    "source_doc": "none",
+    "difficulty": "specific_detail",
+    "generated_answer": "The context does not provide information about Meridian Hollow's annual revenue.",
+    "retrieved_chunks": [
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "company raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments\nMeridian Hollow pledged to be carbon-neutral by 2027. All Tidepod packaging is made from\nrecycled ocean plastic. In 2024 the company recycled 2.3 tonnes of decommissioned membranes\nthrough a partner facility in Rotterdam.",
+        "score": 0.9368625283241272
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "MERIDIAN HOLLOW — Company Fact Sheet\nOverview\nMeridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavik, Iceland. The\ncompany builds compact, modular purification units called \"Tidepods\" for remote coastal\ncommunities. As of 2025 it employs 142 people across three offices.\nThe Tidepod Product Line\nThe flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs\nentirely on solar power. It weighs 38 kilograms and can be assembled by two people in under 45\nminutes. The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day.\nEach Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment",
+        "score": 1.0898172855377197
+      },
+      {
+        "source": "uploads/meridian_hollow_factsheet.pdf",
+        "page": "1",
+        "text": "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use\nbefore replacement.\nPricing & Deployment\nA single Tidepod-3 unit costs 8,900 USD. Meridian Hollow offers a subscription maintenance plan\nat 600 USD per year, which includes one free membrane replacement. The company has\ndeployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal\nKenya as part of the \"BlueWell\" initiative launched in 2022.\nLeadership\nThe CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company. The CTO,\nRajiv Menon, previously worked on membrane technology at a Singaporean water utility. The\ncompany raised a 12 million USD Series A round in 2021, led by Northwind Ventures.\nSustainability Commitments",
+        "score": 1.3014755249023438
+      }
+    ],
+    "error": null,
+    "latency_seconds": 1.43
+  }
+]

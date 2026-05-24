@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "name": "DocuMind RAG Evaluation Set",
+    "version": "0.1.0",
+    "description": "Ground-truth eval set for DocuMind. Corpus = Meridian Hollow fact sheet + Roshan Mohammed CV, both ingested into ChromaDB. Each row is authored by hand. retrieved_chunks and generated_answer are populated at eval time by running DocuMind, NOT here.",
+    "corpus_documents": [
+      "meridian_hollow_factsheet.txt",
+      "roshan_cv.txt"
+    ],
+    "schema": {
+      "id": "stable identifier for the row",
+      "query": "the question fed to DocuMind",
+      "ground_truth_answer": "the correct reference answer, authored by hand",
+      "gold_context": "list of exact source passage(s) that SHOULD be retrieved to answer correctly. Multiple entries = multi-hop.",
+      "source_doc": "which corpus document the answer lives in",
+      "difficulty": "easy_lookup | specific_detail | multi_hop",
+      "_note_generated_fields": "retrieved_chunks and generated_answer are added at eval time, not authored here"
+    }
+  },
+  "rows": [
+    {
+      "id": "mh_001",
+      "query": "How many litres of seawater per day can the Tidepod-3 process?",
+      "ground_truth_answer": "Up to 4,000 litres per day.",
+      "gold_context": [
+        "The flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs entirely on solar power."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "easy_lookup"
+    },
+    {
+      "id": "mh_002",
+      "query": "In what year and city was Meridian Hollow founded?",
+      "ground_truth_answer": "It was founded in 2019 in Reykjavík, Iceland.",
+      "gold_context": [
+        "Meridian Hollow is a freshwater desalination startup founded in 2019 in Reykjavík, Iceland."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "easy_lookup"
+    },
+    {
+      "id": "mh_003",
+      "query": "How much does a single Tidepod-3 unit cost?",
+      "ground_truth_answer": "8,900 USD.",
+      "gold_context": [
+        "A single Tidepod-3 unit costs 8,900 USD."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "mh_004",
+      "query": "How long is the Tidepod-3's graphene-oxide membrane rated to last before replacement?",
+      "ground_truth_answer": "5 years of continuous use.",
+      "gold_context": [
+        "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use before replacement."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "mh_005",
+      "query": "Who is the CEO of Meridian Hollow and what was her background before founding the company?",
+      "ground_truth_answer": "Dr. Anneli Vos, who was a former marine biologist and co-founded the company.",
+      "gold_context": [
+        "The CEO is Dr. Anneli Vos, a former marine biologist who co-founded the company."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "mh_006",
+      "query": "How much more water can the current Tidepod model process per day compared to the discontinued one?",
+      "ground_truth_answer": "2,500 litres more per day. The Tidepod-3 processes 4,000 L/day while the discontinued Tidepod-2 processed 1,500 L/day.",
+      "gold_context": [
+        "The flagship product, the Tidepod-3, processes up to 4,000 litres of seawater per day and runs entirely on solar power.",
+        "The earlier Tidepod-2 model, discontinued in 2023, processed only 1,500 litres per day."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "multi_hop"
+    },
+    {
+      "id": "mh_007",
+      "query": "What is the largest single Tidepod deployment, where is it, and what initiative is it part of?",
+      "ground_truth_answer": "300 units in coastal Kenya, as part of the BlueWell initiative launched in 2022.",
+      "gold_context": [
+        "The company has deployed 1,270 units across 14 countries, with the largest deployment — 300 units — in coastal Kenya as part of the \"BlueWell\" initiative launched in 2022."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "mh_008",
+      "query": "By what year has Meridian Hollow pledged to be carbon-neutral?",
+      "ground_truth_answer": "2027.",
+      "gold_context": [
+        "Meridian Hollow pledged to be carbon-neutral by 2027."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "easy_lookup"
+    },
+    {
+      "id": "mh_009",
+      "query": "Who led Meridian Hollow's Series A round, how much was it, and in what year?",
+      "ground_truth_answer": "A 12 million USD Series A round in 2021, led by Northwind Ventures.",
+      "gold_context": [
+        "The company raised a 12 million USD Series A round in 2021, led by Northwind Ventures."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "mh_010",
+      "query": "Does the Tidepod-3 cost more for the unit itself or for five years of the subscription maintenance plan?",
+      "ground_truth_answer": "The unit itself costs more. The Tidepod-3 unit is 8,900 USD, while five years of the 600 USD/year maintenance plan totals 3,000 USD.",
+      "gold_context": [
+        "A single Tidepod-3 unit costs 8,900 USD.",
+        "Meridian Hollow offers a subscription maintenance plan at 600 USD per year, which includes one free membrane replacement."
+      ],
+      "source_doc": "meridian_hollow_factsheet.txt",
+      "difficulty": "multi_hop"
+    },
+    {
+      "id": "cv_001",
+      "query": "By what percentage did Roshan reduce the DocuMind production Docker image, and from what size to what size?",
+      "ground_truth_answer": "By about 89%, from 8.9 GB to under 1 GB.",
+      "gold_context": [
+        "Reduced the production Docker image from 8.9 GB to under 1 GB (≈89%) by migrating from local HuggingFace embeddings to OpenAI's embedding API after profiling real dependencies."
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "cv_002",
+      "query": "How many classes does the PlantNet39 disease classifier predict, and what model architecture does it use?",
+      "ground_truth_answer": "39 classes, using EfficientNet-B2 via transfer learning.",
+      "gold_context": [
+        "Built and deployed a 39-class plant-disease classifier via transfer learning on EfficientNet-B2; ~35 MB model optimised for CPU-only inference."
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "cv_003",
+      "query": "What method does DocuMind use to make ingestion idempotent?",
+      "ground_truth_answer": "SHA-256 deterministic chunk IDs.",
+      "gold_context": [
+        "Designed idempotent ingestion with SHA-256 deterministic chunk IDs; implemented async LLM calls via LangChain ainvoke() for concurrent request handling."
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "cv_004",
+      "query": "Which two deep learning architectures did Roshan implement from scratch in PyTorch without high-level transformer libraries?",
+      "ground_truth_answer": "A GPT-style transformer and the Vision Transformer (ViT).",
+      "gold_context": [
+        "Implemented a GPT-style transformer and replicated the Vision Transformer paper end-to-end in PyTorch — tokenization, embeddings, multi-head self-attention, causal masking, patch/positional embeddings — demonstrating deep architectural understanding beyond library usage."
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "easy_lookup"
+    },
+    {
+      "id": "cv_005",
+      "query": "Where did Roshan complete his MSc in Artificial Intelligence and in what years?",
+      "ground_truth_answer": "Buckinghamshire New University, United Kingdom, from 2023 to 2024.",
+      "gold_context": [
+        "MSc Artificial Intelligence 2023 – 2024 Buckinghamshire New University, United Kingdom"
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "easy_lookup"
+    },
+    {
+      "id": "cv_006",
+      "query": "Which embedding approach did DocuMind move away from, and which did it move to, when shrinking the Docker image?",
+      "ground_truth_answer": "It migrated away from local HuggingFace embeddings to OpenAI's embedding API.",
+      "gold_context": [
+        "Reduced the production Docker image from 8.9 GB to under 1 GB (≈89%) by migrating from local HuggingFace embeddings to OpenAI's embedding API after profiling real dependencies."
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "cv_007",
+      "query": "What logging library does DocuMind use, and what testing framework backs its test suite?",
+      "ground_truth_answer": "It uses structlog for structured JSON logging and pytest for its test suite.",
+      "gold_context": [
+        "Built a custom exception hierarchy with structured error codes, structured JSON logging (structlog), and a pytest suite (unit + integration with mocked LLM/vectorstore)."
+      ],
+      "source_doc": "roshan_cv.txt",
+      "difficulty": "specific_detail"
+    },
+    {
+      "id": "cross_001",
+      "query": "Between Roshan's PlantNet39 model and the Tidepod-3's membrane, which has a longer stated lifespan or is that comparison even possible from the documents?",
+      "ground_truth_answer": "The comparison is not possible. The documents state the Tidepod-3 membrane is rated for 5 years, but the CV gives no lifespan for the PlantNet39 model (only its ~35 MB size and CPU-only inference). A faithful answer should decline to compare.",
+      "gold_context": [
+        "Each Tidepod-3 uses a proprietary graphene-oxide membrane rated for 5 years of continuous use before replacement.",
+        "Built and deployed a 39-class plant-disease classifier via transfer learning on EfficientNet-B2; ~35 MB model optimised for CPU-only inference."
+      ],
+      "source_doc": "both",
+      "difficulty": "multi_hop"
+    },
+    {
+      "id": "neg_001",
+      "query": "What is Meridian Hollow's annual revenue?",
+      "ground_truth_answer": "The documents do not state Meridian Hollow's annual revenue. A faithful system should say it cannot find this information rather than guessing.",
+      "gold_context": [],
+      "source_doc": "none",
+      "difficulty": "specific_detail"
+    }
+  ]
+}
