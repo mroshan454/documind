@@ -1,17 +1,16 @@
 # DocuMind
 
-> A production RAG system for PDF question answering. Upload documents, ask questions, get answers with cited sources — backed by FastAPI, LangChain, ChromaDB, and OpenAI, deployed on AWS with HTTPS.
+> A RAG system for PDF question answering. Upload your documents, ask questions, get answers with cited sources — backed by FastAPI, LangChain, ChromaDB, and OpenAI, deployed on AWS with HTTPS. Built to learn how production RAG system works.
 
-**🔗 Live demo:** [https://documind.mroshan454.dev/docs](https://documind.mroshan454.dev/docs)
+**Live demo:** [https://documind.mroshan454.dev/docs](https://documind.mroshan454.dev/docs)
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-async-009688)
-![LangChain](https://img.shields.io/badge/LangChain-RAG-1c3c3c)
-![Docker](https://img.shields.io/badge/Docker-containerized-2496ED)
-![AWS](https://img.shields.io/badge/AWS-EC2-FF9900)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
+## Motivation 
+
+I had built models from scratch using PyTorch (GPT , Vision Transformer , Multimodal Image Captioning) , but never deployed anything in a production like enviornement where users can interact.
 
 ## What it does
 
@@ -19,9 +18,9 @@ DocuMind is an end-to-end document question-answering backend. Upload a PDF and 
 
 1. **Ingests** the document — extracts text, splits into semantic chunks, embeds each chunk into a vector store
 2. **Retrieves** relevant chunks when you ask a question (semantic similarity search)
-3. **Generates** a grounded answer using GPT, returning the answer along with the source chunks it cited
+3. **Generates** a grounded answer only based on the sources using GPT, returning the answer along with the source chunks it cited
 
-Idempotent ingestion (re-uploading the same PDF doesn't duplicate chunks). Async query handling. Graceful error responses for edge cases like image-only PDFs.
+Idempotent ingestion (re-uploading the same PDF doesn't duplicate chunks). Async query handling. Handle error gracefully if you upload image-only PDFs.
 
 ---
 
@@ -166,11 +165,11 @@ pytest tests/integration  # integration tests only
 
 ## Production engineering highlights
 
-A few decisions worth calling out — these were the hard parts.
+A few decisions I made while deploying the application.
 
 ### Reduced Docker image from 8.9 GB → under 1 GB
 
-The first build shipped 8.9 GB of dependencies. The culprit: PyTorch was pulling in 7 GB of CUDA libraries to support HuggingFace's `sentence-transformers/all-MiniLM-L6-v2` embedding model — none of which runs on a CPU-only EC2 instance.
+The first build shipped 8.9 GB of dependencies. Found out the problem was PyTorch pulling in 7 GB of CUDA libraries to support HuggingFace's `sentence-transformers/all-MiniLM-L6-v2` embedding model — which doesn't runs on a CPU-only EC2 instance.
 
 **Tradeoff analysis:**
 
@@ -180,7 +179,7 @@ The first build shipped 8.9 GB of dependencies. The culprit: PyTorch was pulling
 | Local HF embeddings (GPU) | 8.9 GB | + GPU instance cost | fast |
 | OpenAI embeddings API | < 1 GB | ~$0.02 per 1M tokens | low (network) |
 
-Chose **OpenAI embeddings** — for portfolio-scale traffic the per-document cost is ~$0.001, and shrinking the image meaningfully improves cold-start time and reduces EC2 disk usage. If this scaled to enterprise volumes (millions of documents), the math would flip and local GPU embeddings would win.
+To avoid the size (8.9GB) I chose **OpenAI embeddings** — for portfolio-scale traffic the per-document cost is ~$0.001, and shrinking the image meaningfully improves cold-start time and reduces EC2 disk usage. If this scaled to enterprise volumes (millions of documents), the math would flip and local GPU embeddings would win.
 
 ### Idempotent ingestion with SHA-256 chunk IDs
 
@@ -205,7 +204,7 @@ Query path uses `ainvoke()` so multiple concurrent queries don't block on each o
 
 ### Structured logging
 
-Every request emits JSON logs with `event`, `level`, `timestamp`, plus context (`filename`, `pages`, `chunks`, `file_hash`). Greppable, ready to ship to a log aggregator.
+Every request emits JSON logs with `event`, `level`, `timestamp`, plus context (`filename`, `pages`, `chunks`, `file_hash`).
 
 ---
 
@@ -232,7 +231,8 @@ documind/
 
 ---
 
-## Roadmap
+
+## Further Works
 
 - [ ] **OCR support** — Tesseract integration for scanned / image-only PDFs (currently returns HTTP 400)
 - [ ] **Gradio frontend** — clean UI on top of the API for non-technical users
@@ -249,9 +249,10 @@ MIT. See `LICENSE`.
 
 ---
 
+
 ## About
 
-Built by [Roshan Mohammed](https://linkedin.com/in/roshan-mohammed-068008279), MSc AI graduate based in Melbourne. Open to Junior AI Engineer / ML Engineer / Backend Engineer roles — full Australian work rights via MATES Visa (Subclass 403), no sponsorship required.
+Built by [Roshan Mohammed](https://linkedin.com/in/roshan-mohammed-068008279), MSc AI graduate
 
 - 🌐 Live demo: [documind.mroshan454.dev/docs](https://documind.mroshan454.dev/docs)
 - 🐙 GitHub: [github.com/mroshan454](https://github.com/mroshan454)
