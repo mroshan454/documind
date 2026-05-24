@@ -1,6 +1,8 @@
+.venv/
 venv/
+uploads/
+chroma_db/
+.env
 __pycache__/
 *.pyc
-.env
-chroma_db/
-.DS_Store
+EOF.DS_Store
