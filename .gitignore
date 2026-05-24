@@ -5,4 +5,5 @@ chroma_db/
 .env
 __pycache__/
 *.pyc
-EOF.DS_Store
+EOF
+.DS_Store
