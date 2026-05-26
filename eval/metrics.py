@@ -45,4 +45,35 @@ def evaluate_recall(results_path):
     print(f"\n Mean Recall@k over {len(scores)} scored rows: {avg:.3f}")
     return avg 
 
+def precision_at_k(gold_context, retrieved_chunks):
+    """
+    What Fraction were relevaant of the chunks we retrieved
+    """
+    if len(gold_context) == 0:
+        return None 
+    if len(retrieved_chunks) == 0:
+        return None 
+    relevant = 0 
+    for chunk in retrieved_chunks:
+        if any(normalize(g) in normalize(chunk["text"]) for g in gold_context):
+            relevant += 1 
+    return relevant/len(retrieved_chunks)
+
+def evaluate_precision(results_path):
+    with open(results_path) as f:
+        results = json.load(f)
+    scores = []
+    for row in results:
+        r = precision_at_k(row["gold_context"], row["retrieved_chunks"])
+        print(f'{row["id"]:12} precision = {r}')
+        if r is not None:
+            scores.append(r)
+    avg = sum(scores) / len(scores)
+    print(f"\n Mean Precision@k over {len(scores)} scored rows: {avg:.3f}")
+    return avg 
+
+
 evaluate_recall("eval/eval_results.json")
+evaluate_precision("eval/eval_results.json")
+
+
