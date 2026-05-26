@@ -19,12 +19,12 @@ from pathlib import Path
 
 import requests
 
-# --- Config -----------------------------------------------------------------
+# Config 
 API_URL = "http://localhost:8000/query"
 EVAL_SET_PATH = Path(__file__).parent / "documind_eval_set.json"
 RESULTS_PATH = Path(__file__).parent / "eval_results.json"
-TOP_K = 3                  # must match what you want to evaluate (your /query default)
-REQUEST_TIMEOUT = 60       # seconds; LLM calls can be slow
+TOP_K = 3                  
+REQUEST_TIMEOUT = 60       
 
 
 def load_eval_set(path: Path) -> list[dict]:
@@ -60,16 +60,16 @@ def main():
         print(f"[{i}/{len(rows)}] {rid}: {query[:60]}...")
 
         record = {
-            # --- authored in advance (ground truth) ---
+            
             "id": rid,
             "query": query,
             "ground_truth_answer": row["ground_truth_answer"],
             "gold_context": row["gold_context"],
             "source_doc": row.get("source_doc"),
             "difficulty": row.get("difficulty"),
-            # --- generated at eval time (filled below) ---
+            
             "generated_answer": None,
-            "retrieved_chunks": None,   # list of {text, score, source, page}
+            "retrieved_chunks": None,   
             "error": None,
         }
 
