@@ -5,7 +5,7 @@ Goal: score ONE row (neg_001) for faithfulness, to (a) confirm RAGAS is
 performing correctly and (b) check our "I dont Know Answer"
 scores HIGH faithfulness.
 """
-
+import re 
 import json
 from pathlib import Path 
 
@@ -15,11 +15,17 @@ from ragas.metrics import faithfulness
 
 RESULTS_PATH = Path(__file__).parent / "eval_results.json"
 
+
+def strip_citations(text):
+    # Remove "Source"
+    text = re.sub(r'\(Source:.*?\)','',text)
+    return text.strip()
+
 def to_ragas_format(row):
     """Reshape on of our result rows into the keys RAGAS expects."""
     return { 
         "question": row["query"],
-        "answer": row["generated_answer"],
+        "answer": strip_citations(row["generated_answer"]),
         "ground_truth":row["ground_truth_answer"],
         "contexts": [chunk["text"] for chunk in row["retrieved_chunks"]],
 
