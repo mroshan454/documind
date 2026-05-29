@@ -11,7 +11,14 @@ from pathlib import Path
 
 from datasets import Dataset 
 from ragas import evaluate 
-from ragas.metrics import faithfulness 
+from ragas.metrics import faithfulness , answer_relevancy 
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from ragas.llms import LangchainLLMWrapper
+from ragas.embeddings import LangchainEmbeddingsWrapper
+
+
+ragas_llm = LangchainLLMWrapper(ChatOpenAI(model="gpt-4o-mini"))
+ragas_emb = LangchainEmbeddingsWrapper(OpenAIEmbeddings(model="text-embedding-3-small"))
 
 RESULTS_PATH = Path(__file__).parent / "eval_results.json"
 
@@ -45,14 +52,18 @@ def main():
         "ground_truth": [r["ground_truth"] for r in rows],
     })
 
-    scores = evaluate(dataset, metrics=[faithfulness])
+    scores = evaluate(dataset, 
+                metrics=[faithfulness,answer_relevancy],
+                llm=ragas_llm,
+                embeddings=ragas_emb,)
+    
     print(scores)
 
     # per-row scores, paired with ids
     df = scores.to_pandas()
-    for rid, f_score in zip([r["id"] for r in results if r["generated_answer"] is not None],
-                            df["faithfulness"]):
-        print(f"{rid:12} faithfulness = {f_score}")
+    ids = [r["id"] for r in results if r["generated_answer"] is not None]
+    for rid, f_score, a_score in zip(ids, df["faithfulness"], df["answer_relevancy"]):
+        print(f"{rid:12} faithfulness = {f_score:.3f} answer_relevancy={a_score:.3f}")
 
 
 if __name__ == "__main__":
