@@ -3,11 +3,14 @@ from pathlib import Path
 from fastapi import FastAPI , UploadFile , File , HTTPException , Request 
 from fastapi.responses import JSONResponse 
 from pydantic import BaseModel 
+import gradio as gr 
+from app.ui import build_gradio_app
+from langchain_chroma import Chroma 
 
 from app.core.logging import configure_logging, get_logger
 from app.core.exceptions import DocuMindException 
 from app.core.exceptions import EmptyDocumentError
-from app.services.ingestion_service import ingest_document
+from app.services.ingestion_service import ingest_document, _embedding_model , CHROMA_DIR 
 from app.services.query_service import query_documents
 
 configure_logging()
@@ -46,14 +49,28 @@ async def health_check():
 
 @app.get("/")
 async def root():
+    vector_store = Chroma(
+        collection_name = "documind",
+        embedding_function=_embedding_model,
+        persist_directory=CHROMA_DIR,
+    )
+    try:   
+        total_chunks = vector_store._collection.count()
+    except Exception:
+        total_chunks = None 
     return {
         "name": "Documind",
         "version": "1.0.0",
         "description" : "Production RAG System for PDF Question answering",
         "docs": "/docs",
+        "ui":"/ui",
         "endpoints": {
             "ingest": "POST /ingest",
-            "query" : "POST / query"
+            "query" : "POST /query"
+        },
+        "stats":{
+        "total_chunks":total_chunks,
+        "collection":"documind",
         },
     }
 
@@ -97,3 +114,6 @@ async def query_endpoint(request: QueryRequest):
         num_sources=len(result["sources"]),
     )
     return result 
+
+demo = build_gradio_app()
+app = gr.mount_gradio_app(app,demo,path="/ui")
