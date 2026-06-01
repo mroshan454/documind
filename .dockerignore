@@ -12,3 +12,6 @@ tests/
 notes/
 *.md
 build_*.js
+eval/eval_results.json
+eval/charts/  
+
