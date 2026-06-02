@@ -330,7 +330,6 @@ documind/
 ## Further Works
 
 - [ ] **OCR support** — Tesseract integration for scanned / image-only PDFs (currently returns HTTP 400)
-- [ ] **Gradio frontend** — clean UI on top of the API for non-technical users
 - [ ] **Agentic retrieval** — multi-step retrieval with query refinement
 - [ ] **Rate limiting** — per-IP request limits at the Nginx layer
 - [ ] **Streaming responses** — Server-Sent Events for token-by-token output
