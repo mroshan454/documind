@@ -347,7 +347,7 @@ MIT. See `LICENSE`.
 ## About
 
 Built by [Roshan Mohammed](https://linkedin.com/in/roshan-mohammed-068008279), MSc AI graduate
-- 🌐 Live demo: [documind.mroshan454.dev/docs](https://documind.mroshan454.dev/docs)
+- 🌐 Live demo: [documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui)
 - 🐙 GitHub: [github.com/mroshan454](https://github.com/mroshan454)
 - 🤗 Hugging Face: [huggingface.co/roshan454](https://huggingface.co/roshan454)
 - 💼 LinkedIn: [in/roshan-mohammed-068008279](https://linkedin.com/in/roshan-mohammed-068008279)
