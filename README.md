@@ -2,7 +2,9 @@
 
 > A RAG system for PDF question answering. Upload your documents, ask questions, get answers with cited sources — backed by FastAPI, LangChain, ChromaDB, and OpenAI, deployed on AWS with HTTPS. Built to learn how production RAG system works.
 
-**Live demo:** [https://documind.mroshan454.dev/docs](https://documind.mroshan454.dev/docs)
+![DocuMind UI](videos/Documind_Demo.mp4)
+
+**Live demo:** [https://documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui) · **Swagger API docs:** [/docs](https://documind.mroshan454.dev/docs)
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -12,16 +14,19 @@
 
 I had built models from scratch using PyTorch (GPT , Vision Transformer , Multimodal Image Captioning) , but never deployed anything in a production like enviornement where users can interact.
 
-## What's New (May 29 , 2026)
+## What's New (June 2026)
 
-Recently added a complete RAG evaluation harness:
+Two recent additions:
 
+**1. Web UI** — A Gradio interface mounted at `/ui` for non-technical users. Upload a PDF, ask questions, see the exact retrieved chunks with similarity scores. Mounted inside the existing FastAPI app — one container, one deployment.
+→ Try it live: [documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui)
+
+**2. Custom RAG evaluation harness:**
 - **Retrieval metrics from scratch:** recall@k (0.97) and precision@k (0.37) — the classic see-saw, in real data.
 - **Generation metrics via RAGAS:** faithfulness (0.98) and answer relevancy (0.91 excl. refusals) — LLM-as-judge with documented limitations.
 - **A working framework for reading metric output critically:** artifact vs. true signal vs. metric limitation — each calling for a different response.
 
 → [See the full Evaluation section](#evaluation) for charts, per-row analysis, and how I debugged the metrics themselves.
-
 ---
 
 ## What it does
