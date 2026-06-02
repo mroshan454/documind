@@ -2,7 +2,7 @@
 
 > A RAG system for PDF question answering. Upload your documents, ask questions, get answers with cited sources — backed by FastAPI, LangChain, ChromaDB, and OpenAI, deployed on AWS with HTTPS. Built to learn how production RAG system works.
 
-![DocuMind UI](videos/Documind_Demo.mp4)
+![DocuMind UI](videos/Documind_Demo.gif)
 
 **Live demo:** [https://documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui) · **Swagger API docs:** [/docs](https://documind.mroshan454.dev/docs)
 
