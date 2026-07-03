@@ -1,10 +1,10 @@
 # DocuMind
 
-> A RAG system for PDF question answering. Upload your documents, ask questions, get answers with cited sources — backed by FastAPI, LangChain, ChromaDB, and OpenAI, deployed on AWS with HTTPS. Built to learn how production RAG system works.
+> A RAG system for PDF question answering. Upload your documents, ask questions, get answers with cited sources — backed by FastAPI, LangChain, ChromaDB, and OpenAI, deployed on Render. Built to learn how production RAG system works.
 
 ![DocuMind UI](videos/Documind_Demo.gif)
 
-**Live demo:** [https://documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui) · **Swagger API docs:** [/docs](https://documind.mroshan454.dev/docs)
+**Live demo:** [https://documind-bsa2.onrender.com/ui/](https://documind-bsa2.onrender.com/ui/) 
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -19,7 +19,7 @@ I had built models from scratch using PyTorch (GPT , Vision Transformer , Multim
 Two recent additions:
 
 **1. Web UI** — A Gradio interface mounted at `/ui` for non-technical users. Upload a PDF, ask questions, see the exact retrieved chunks with similarity scores. Mounted inside the existing FastAPI app — one container, one deployment.
-→ Try it live: [documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui)
+→ Try it live: [https://documind-bsa2.onrender.com/ui/](https://documind-bsa2.onrender.com/ui/)
 
 **2. Custom RAG evaluation harness:**
 - **Retrieval metrics from scratch:** recall@k (0.97) and precision@k (0.37) — the classic see-saw, in real data.
@@ -347,7 +347,7 @@ MIT. See `LICENSE`.
 ## About
 
 Built by [Roshan Mohammed](https://linkedin.com/in/roshan-mohammed-068008279), MSc AI graduate
-- 🌐 Live demo: [documind.mroshan454.dev/ui](https://documind.mroshan454.dev/ui)
+- 🌐 Live demo: [https://documind-bsa2.onrender.com/ui/](https://documind-bsa2.onrender.com/ui/)
 - 🐙 GitHub: [github.com/mroshan454](https://github.com/mroshan454)
 - 🤗 Hugging Face: [huggingface.co/roshan454](https://huggingface.co/roshan454)
 - 💼 LinkedIn: [in/roshan-mohammed-068008279](https://linkedin.com/in/roshan-mohammed-068008279)
