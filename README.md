@@ -14,7 +14,12 @@
 
 I had built models from scratch using PyTorch (GPT , Vision Transformer , Multimodal Image Captioning) , but never deployed anything in a production like enviornement where users can interact.
 
-## What's New (June 2026)
+## Update (July 2026) 
+
+**Migrated from AWS EC2 to Render**: Changed the hosting of the app in EC2 to free hosting using Render , to cut the cost of hosting , Now you can access Documind on this link.
+→ Try it live: [https://documind-bsa2.onrender.com/ui/](https://documind-bsa2.onrender.com/ui/)
+
+## Update (June 2026)
 
 Two recent additions:
 
@@ -22,9 +27,9 @@ Two recent additions:
 → Try it live: [https://documind-bsa2.onrender.com/ui/](https://documind-bsa2.onrender.com/ui/)
 
 **2. Custom RAG evaluation harness:**
-- **Retrieval metrics from scratch:** recall@k (0.97) and precision@k (0.37) — the classic see-saw, in real data.
-- **Generation metrics via RAGAS:** faithfulness (0.98) and answer relevancy (0.91 excl. refusals) — LLM-as-judge with documented limitations.
-- **A working framework for reading metric output critically:** artifact vs. true signal vs. metric limitation — each calling for a different response.
+- **Retrieval metrics from scratch:** recall@k (0.97) and precision@k (0.37) the classic see-saw, in real data.
+- **Generation metrics via RAGAS:** faithfulness (0.98) and answer relevancy (0.91 excl. refusals) LLM-as-judge with documented limitations.
+- **A working framework for reading metric output critically:** artifact vs. true signal vs. metric limitation each calling for a different response.
 
 → [See the full Evaluation section](#evaluation) for charts, per-row analysis, and how I debugged the metrics themselves.
 ---
@@ -242,7 +247,7 @@ DocuMind includes a custom RAG evaluation harness covering both retrieval and ge
 | **faithfulness**    | 0.98  | Are the answer's claims grounded in the retrieved chunks? (RAGAS / LLM-judge) |
 | **answer relevancy** | 0.91 *(excl. refusals)* | Does the answer actually address the question? (RAGAS / embedding similarity) |
 
-- Retrieval metrics implemented from scratch (substring matching with Unicode-aware normalisation: whitespace collapse, NFKD accent folding, punctuation stripping).
+- Retrieval metrics implemented from scratch (substring matching with Unicode-aware normalisation: whitespace collapse, punctuation stripping).
 - Generation metrics computed via [RAGAS](https://github.com/explodinggradients/ragas) with `gpt-4o-mini` as the judge and `text-embedding-3-small` for relevancy.
 - Full per-row results: [`eval/eval_summary.csv`](eval/eval_summary.csv) · Harness code: [`eval/run_eval.py`](eval/run_eval.py), [`eval/metrics.py`](eval/metrics.py), [`eval/ragas_faithfulness.py`](eval/ragas_faithfulness.py)
 
@@ -260,30 +265,30 @@ Three rows are intentionally created to stress the system and reveal where singl
 
 ### Three categories of "bad" metric output
 
-The most useful thing this whole eval process taught me wasn't about the system — it was about how to read metric scores carefully. Whenever a score is below 1.0, the reason falls into one of three categories, and each one needs a different response:
+The most useful thing this whole eval process taught me wasn't about the system , it was about how to read metric scores carefully. Whenever a score is below 1.0, the reason falls into one of three categories, and each one needs a different response:
 
 **1. Artifact — the measurement itself is wrong.**
-The initial faithfulness average was 0.89, with four rows stuck at exactly 0.50. Here's what was happening: RAGAS was breaking each short factual answer into two parts — the actual fact (which the chunks supported) and the (Source: …) citation tag at the end. Since filenames don't appear inside the chunk text, the judge couldn't verify the citation and marked it as unsupported → 1 supported out of 2 = 0.50. So the metric wasn't actually catching hallucinations; it was punishing the answer for following the prompt's own "always cite the source" instruction. After stripping the citation tags before scoring, faithfulness jumped to 0.98.
+The initial faithfulness average was 0.89, with four rows stuck at exactly 0.50. Here's what was happening: RAGAS was breaking each short factual answer into two parts , the actual fact (which the chunks supported) and the (Source: …) citation tag at the end. Since filenames don't appear inside the chunk text, the judge couldn't verify the citation and marked it as unsupported → 1 supported out of 2 = 0.50. So the metric wasn't actually catching hallucinations; it was punishing the answer for following the prompt's own "always cite the source" instruction. After stripping the citation tags before scoring, faithfulness jumped to 0.98.
 Response: fix the measurement.
 
 **2. True signal — the metric is correctly catching a real problem in the system.** 
-cv_003 scored faithfulness 0.67. The answer included the line "ensures unique identifier, allowing consistent processing without duplication" — which is true in general, but the retrieved chunks never actually said this. The model pulled this extra explanation from its own training, not from the document. That's a mild form of unfaithfulness, and the metric caught it correctly.
+cv_003 scored faithfulness 0.67. The answer included the line "ensures unique identifier, allowing consistent processing without duplication" , which is true in general, but the retrieved chunks never actually said this. The model pulled this extra explanation from its own training, not from the document. That's a mild form of unfaithfulness, and the metric caught it correctly.
 Response: either fix the system (update the prompt to stop the model from adding its own explanations) or accept that being too strict can make answers less helpful, and just document the tradeoff.
 
 **3.Limitation — the metric is just not good at scoring this type of answer.** 
-Refusal answers (neg_001, cross_001) scored answer relevancy = 0.00, even though the answers were correct, honest, and faithful. Here's why: RAGAS's relevancy check works by generating a question from the answer and comparing it to the original question. But a refusal answer like "this information isn't in the context" generates a question like "is this information available?" — which is very different from the original "what is X?". So the similarity score drops to zero, even though the answer was the right thing to say. The metric simply isn't designed to score refusals fairly, no matter how appropriate they are.
+Refusal answers (neg_001, cross_001) scored answer relevancy = 0.00, even though the answers were correct, honest, and faithful. Here's why: RAGAS's relevancy check works by generating a question from the answer and comparing it to the original question. But a refusal answer like "this information isn't in the context" generates a question like "is this information available?" m which is very different from the original "what is X?". So the similarity score drops to zero, even though the answer was the right thing to say. The metric simply isn't designed to score refusals fairly, no matter how appropriate they are.
 Response: just document the limitation, and report relevancy excluding refusal rows as the more honest number (0.91).
 
 ### Why retrieval and generation metrics need to be reported separately
 cross_001 is the clearest example of why you need both kinds of metric, not just one. Its scores were:
 
 recall = 0.50 — retrieval only found half the chunks it needed.
-faithfulness = 1.00 — but the answer itself was perfect, given what it received. The model correctly said "this comparison isn't possible" instead of making up a fake PlantNet39(A project From My CV)  lifespan.
+faithfulness = 1.00 , but the answer itself was perfect, given what it received. The model correctly said "this comparison isn't possible" instead of making up a fake PlantNet39(A project From My CV)  lifespan.
 
-If we'd only looked at one combined score, this would've been hidden. Faithfulness measures the answer against what the model was actually given — not what it should have been given. So a model can be perfectly faithful even when retrieval has failed, and you'd never know unless you look at both numbers side by side.
+If we'd only looked at one combined score, this would've been hidden. Faithfulness measures the answer against what the model was actually given , not what it should have been given. So a model can be perfectly faithful even when retrieval has failed, and you'd never know unless you look at both numbers side by side.
 
 ### Why the corpus is small (being honest about it)
-The corpus has only 13 chunks, which makes retrieval pretty easy — with k=3, we're already grabbing almost a quarter of all the chunks for every query. So a high recall score here is partly because the corpus is small, not because retrieval is amazing. The harness itself works correctly, though, and is ready to be used on a much larger corpus where the recall number would actually mean something. Even at this small scale, it still caught one real cross-document retrieval gap — which is encouraging.
+The corpus has only 13 chunks, which makes retrieval pretty easy , with k=3, we're already grabbing almost a quarter of all the chunks for every query. So a high recall score here is partly because the corpus is small, not because retrieval is amazing. The harness itself works correctly, though, and is ready to be used on a much larger corpus where the recall number would actually mean something. Even at this small scale, it still caught one real cross-document retrieval gap which is encouraging.
 
 ### Reproducing
 
